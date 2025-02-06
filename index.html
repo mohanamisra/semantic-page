@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic Page</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .container { width: 80%; margin: auto; }
-        nav, header, main, aside, footer { padding: 20px; border: 1px solid black; margin: 10px 0; }
-        button { padding: 10px; background: blue; color: white; cursor: pointer; }
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 80%; display: flex; flex-direction: column; }
+        header, footer, nav, main, aside { padding: 20px; border: 1px solid black; margin: 10px 0; }
+        .layout { display: flex; }
+        main { flex: 3; }
+        aside { flex: 1; background: #f4f4f4; }
+        button { padding: 10px; background: blue; color: white; cursor: pointer; margin-right: 10px; }
         .scroll { height: 300px; overflow-y: scroll; border: 1px solid gray; padding: 10px; }
         img { display: block; width: 100%; max-width: 600px; }
     </style>
@@ -22,13 +25,15 @@
             <button aria-label="View Our Services">Services</button>
             <button aria-label="Contact Us">Contact</button>
         </nav>
-        <main>
-            <h2>Main Content</h2>
-            <p>This is some important text.</p>
-            <div class="scroll" aria-label="Scrollable content area">Long scrolling content...<br>More text...<br>Even more text...</div>
-            <img src="https://placehold.co/600x400" alt="A sample placeholder image">
-        </main>
-        <aside>Sidebar with extra links and widgets</aside>
+        <div class="layout">
+            <main>
+                <h2>Main Content</h2>
+                <p>This is some important text.</p>
+                <div class="scroll" aria-label="Scrollable content area">Long scrolling content...<br>More text...<br>Even more text...</div>
+                <img src="https://placehold.co/600x400" alt="A sample placeholder image">
+            </main>
+            <aside>Sidebar with extra links and widgets</aside>
+        </div>
         <footer>Footer Information with links</footer>
     </div>
 </body>
