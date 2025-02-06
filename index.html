@@ -5,40 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic Page</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; }
         .container { width: 80%; margin: auto; }
-        header, footer, nav, aside, main, button { padding: 10px; border: 1px solid #ddd; }
-        header { background: #333; color: white; text-align: center; font-size: 24px; }
-        nav { background: #444; color: white; display: flex; justify-content: space-around; }
-        .content { display: flex; }
-        aside { width: 25%; background: #f4f4f4; }
-        main { width: 75%; }
-        footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: 10px; }
-        button { background: blue; color: white; cursor: pointer; }
-        a { color: blue; text-decoration: underline; }
+        nav, header, main, aside, footer { padding: 20px; border: 1px solid black; margin: 10px 0; }
+        button { padding: 10px; background: blue; color: white; cursor: pointer; }
+        .scroll { height: 300px; overflow-y: scroll; border: 1px solid gray; padding: 10px; }
+        img { display: block; width: 100%; max-width: 600px; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <header>Semantic Page</header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+        <header><img src="https://placehold.co/600x100" alt="Company Logo"></header>
+        <nav aria-label="Main Navigation">
+            <button aria-label="Go to Home Page">Home</button>
+            <button aria-label="Learn About Us">About</button>
+            <button aria-label="View Our Services">Services</button>
+            <button aria-label="Contact Us">Contact</button>
         </nav>
-        <div class="content">
-            <aside>
-                <a href="#">Sidebar Link 1</a>
-                <a href="#">Sidebar Link 2</a>
-            </aside>
-            <main>
-                <p>Some important content here.</p>
-                <button>Click Me</button>
-            </main>
-        </div>
-        <footer>© 2025 Semantic Site</footer>
+        <main>
+            <h2>Main Content</h2>
+            <p>This is some important text.</p>
+            <div class="scroll" aria-label="Scrollable content area">Long scrolling content...<br>More text...<br>Even more text...</div>
+            <img src="https://placehold.co/600x400" alt="A sample placeholder image">
+        </main>
+        <aside>Sidebar with extra links and widgets</aside>
+        <footer>Footer Information with links</footer>
     </div>
-
 </body>
 </html>
